@@ -16,6 +16,7 @@ class Queue {
     }
 
     // Push element x to the back of queue.
+    // time complexity: O(1), space complexity:O(N)
     public void enqueue(int x) {
         stack1.push(x);
     }
