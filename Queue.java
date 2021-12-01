@@ -16,11 +16,13 @@ class Queue {
     }
 
     // Push element x to the back of queue.
+    //time complexity:O(1), space complexity:O(n)
     public void enqueue(int x) {
         stack1.push(x);
     }
 
     // Removes the element from in front of queue.
+    //time complexity: O(1), space complexity: O(n)
     public int dequeue() {
         peek();
         return stack2.pop();
@@ -28,6 +30,7 @@ class Queue {
     }
     
     // Get the front element.
+    //time complexity: O(1), space complexity: O(1)
     public int peek() {
         if(stack2.isEmpty()){
            while(!stack1.isEmpty()){
