@@ -22,6 +22,12 @@ class Queue {
 
     // Removes the element from in front of queue.
     public int dequeue() {
+        if(stack2.isEmpty()){
+            while(!stack1.isEmpty()){
+                stack2.push(stack1.pop());
+            }
+        }
+        return stack1.pop();
 
     }
     
