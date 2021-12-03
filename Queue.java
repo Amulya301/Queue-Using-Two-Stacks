@@ -24,19 +24,22 @@ class Queue {
     // Removes the element from in front of queue.
     // time complexity: O(1), space complexity:O(n)
     public int dequeue() {
-        peek();
+        shiftitems();
         return stack2.pop();
 
     }
+    public void shiftitems(){
+        if(stack2.isEmpty()){
+            while(!stack1.isEmpty()){
+                stack2.push(stack1.pop());
+            }
+         }
+    }
     
     // Get the front element.
-    // time complexity: O(n), space complexity:O(n)
+    // time complexity: O(1), space complexity:O(n)
     public int peek() {
-        if(stack2.isEmpty()){
-           while(!stack1.isEmpty()){
-               stack2.push(stack1.pop());
-           }
-        }
+        shiftitems();
         return stack2.peek();
 
     }
